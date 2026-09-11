@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleek Weather App</title>
+    <link rel="stylesheet" href="mstyle.css">
+</head>
+<body>
+
+    <div class="weather-container">
+        <h1>Weather Dashboard</h1>
+
+        <!-- Search Form -->
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Enter city name..." autocomplete="off">
+            <button id="search-btn">Search</button>
+        </div>
+
+        <!-- Loading State  -->
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>Fetching weather data...</p>
+        </div>
+
+        <!-- Error Message if rises-->
+        <div id="error-message" class="hidden">
+            <p id="error-text">City not found. Please try again.</p>
+        </div>
+
+        <!-- Weather Display Card  -->
+        <div id="weather-card" class="hidden">
+            <h2 id="city-name">--</h2>
+            <div class="weather-info">
+                <span id="temperature">--°C</span>
+                <p id="description">--</p>
+            </div>
+            <div class="weather-details">
+                <p>Humidity: <span id="humidity">--</span>%</p>
+                <p>Wind Speed: <span id="wind-speed">--</span> m/s</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="mscript.js"></script>
+</body>
+</html>
